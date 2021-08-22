@@ -30,13 +30,11 @@
 				</div>
 
 				<div class="form-group">
-					<label for="motto">Motto</label>
-					<input type="text" name="motto" class="form-control" placeholder="(Optional)" />
+					<input type="hidden" name="motto" class="form-control" placeholder="(Optional)" />
 				</div>
 
 				<div class="form-group">
-					<label for="description">Description</label>
-					<textarea name="description" class="form-control" placeholder="(Optional)"></textarea>
+					<textarea style="display:none" name="description" class="form-control" placeholder="(Optional)"></textarea>
 				</div>
 
 				<div class="form-group">

@@ -17,7 +17,7 @@ class AddController extends Controller
     	$this->insertNominee($request);
     	return response()->json([
     		'status' => 'success',
-    		'message'=> 'Nominee added successfully'
+    		'message'=> 'Candidate added successfully'
     	]);
     }
 

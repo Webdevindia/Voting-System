@@ -4388,7 +4388,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var partylists = this.partylists;
 			for (var i in partylists) {
 				if (id == partylists[i]['id']) return partylists[i]['name'];
-			}return 'No Partylist';
+			}return 'No Team Name';
 		}
 	},
 
@@ -4547,7 +4547,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { width: "30%" } }, [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", { attrs: { width: "20%" } }, [_vm._v("Partylist")]),
+        _c("th", { attrs: { width: "20%" } }, [_vm._v("Team Name")]),
         _vm._v(" "),
         _c("th", { attrs: { width: "20%" } }, [_vm._v("Unit")]),
         _vm._v(" "),
@@ -8858,8 +8858,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -9104,11 +9102,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "motto" } }, [_vm._v("Motto")]),
-      _vm._v(" "),
       _c("input", {
         staticClass: "form-control",
-        attrs: { type: "text", name: "motto", placeholder: "(Optional)" }
+        attrs: { type: "hidden", name: "motto", placeholder: "(Optional)" }
       })
     ])
   },
@@ -9117,10 +9113,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "description" } }, [_vm._v("Description")]),
-      _vm._v(" "),
       _c("textarea", {
         staticClass: "form-control",
+        staticStyle: { display: "none" },
         attrs: { name: "description", placeholder: "(Optional)" }
       })
     ])

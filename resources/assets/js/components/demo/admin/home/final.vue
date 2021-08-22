@@ -10,7 +10,7 @@
 							<tr>
 								<th width="12%">Civ HR Control nr</th>
 								<th width="30%">Name</th>
-								<th width="20%">Partylist</th>
+								<th width="20%">Team Name</th>
 								<th width="20%">Unit</th>
 								<th width="20%">Votes</th>
 							</tr>
@@ -65,7 +65,7 @@ export default{
 			for (var i in partylists)
 				if (id == partylists[i]['id'])
 					return partylists[i]['name'];
-			return 'No Partylist';
+			return 'No Team Name';
 		}
 	},
 

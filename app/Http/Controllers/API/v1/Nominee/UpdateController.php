@@ -16,7 +16,7 @@ class UpdateController extends Controller
     	$this->updateNominee($request, $id);
     	return response()->json([
     		'status' => 'success',
-    		'message' => 'Nominee updated successfully'
+    		'message' => 'Candidate updated successfully'
     	]);
     }
 
