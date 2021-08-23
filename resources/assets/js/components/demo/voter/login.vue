@@ -9,7 +9,7 @@
 			<form @submit.prevent="login" id="login_form">
 
 				<div class="form-group">
-					<label for="otp">OTP</label>
+					<label for="otp">ONE TIME PIN</label>
 					<input type="text" name="otp" class="form-control" required/>
 				</div>
 

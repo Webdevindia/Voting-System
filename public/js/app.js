@@ -1819,7 +1819,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "otp" } }, [_vm._v("OTP")]),
+      _c("label", { attrs: { for: "otp" } }, [_vm._v("ONE TIME PIN")]),
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control",

@@ -27,7 +27,9 @@ class ResultController extends Controller
         return response()->json([
             'result'=>$result,
             'position'=>$position,
-            'nominee'=>$nominee
+            'nominee'=>$nominee,
+            'partylist'=>$partylist
+
         ]);
     }
 
