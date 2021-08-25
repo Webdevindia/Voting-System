@@ -2377,7 +2377,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	created: function created() {
@@ -2608,12 +2607,6 @@ var render = function() {
                     staticStyle: { "margin-left": "5px" }
                   },
                   [
-                    _c("h3", [
-                      _c("strong", [
-                        _c("em", [_vm._v('"' + _vm._s(_vm.x.motto) + '"')])
-                      ])
-                    ]),
-                    _vm._v(" "),
                     _c("b", [_vm._v(" Name : ")]),
                     _vm._v(_vm._s(_vm.x.name)),
                     _c("br"),
@@ -2622,7 +2615,7 @@ var render = function() {
                     _vm._v(_vm._s(_vm.x.course)),
                     _c("br"),
                     _vm._v(" "),
-                    _c("b", [_vm._v(" Partylist : ")]),
+                    _c("b", [_vm._v(" Team Name : ")]),
                     _vm._v(_vm._s(_vm.getPartylist(_vm.x.partylist_id))),
                     _c("br"),
                     _c("hr"),
@@ -2665,7 +2658,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Name")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Partylist")]),
+        _c("th", [_vm._v("Team Name")]),
         _vm._v(" "),
         _c("th", [_vm._v("Unit")])
       ])
@@ -9246,16 +9239,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -9382,35 +9365,6 @@ var render = function() {
                 attrs: { type: "text", name: "course", required: "" },
                 domProps: { value: _vm.nominee.course }
               })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "motto" } }, [_vm._v("Motto")]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "motto",
-                  placeholder: "(Optional)"
-                },
-                domProps: { value: _vm.nominee.motto }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "description" } }, [
-                _vm._v("Description")
-              ]),
-              _vm._v(" "),
-              _c(
-                "textarea",
-                {
-                  staticClass: "form-control",
-                  attrs: { name: "description", placeholder: "(Optional)" }
-                },
-                [_vm._v(_vm._s(_vm.nominee.description))]
-              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [

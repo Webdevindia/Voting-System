@@ -42,7 +42,7 @@
 						<tr>
 							<th></th>
 							<th>Name</th>
-							<th>Partylist</th>
+							<th>Team Name</th>
 							<th>Unit</th>
 						</tr>
 					</thead>
@@ -71,10 +71,9 @@
 						<img :src="data.storageURL+x.image" style="height: 150px; width: 150px" class="thumbnail"/>
 					</div>
 					<div class="col-md-9" style="margin-left: 5px;">
-						<h3><strong><em>"{{ x.motto }}"</em></strong></h3>
 						<b> Name : </b>{{ x.name }}<br/>
 						<b> Unit : </b>{{ x.course }}<br/>
-						<b> Partylist : </b>{{ getPartylist(x.partylist_id) }}<br/><hr/>
+						<b> Team Name : </b>{{ getPartylist(x.partylist_id) }}<br/><hr/>
 						{{ x.description }}
 					</div>
 				</div>

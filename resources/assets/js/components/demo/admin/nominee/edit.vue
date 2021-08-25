@@ -32,16 +32,6 @@
 				</div>
 
 				<div class="form-group">
-					<label for="motto">Motto</label>
-					<input type="text" name="motto" class="form-control" :value="nominee.motto" placeholder="(Optional)" />
-				</div>
-
-				<div class="form-group">
-					<label for="description">Description</label>
-					<textarea name="description" class="form-control" placeholder="(Optional)">{{ nominee.description}}</textarea>
-				</div>
-
-				<div class="form-group">
 					<label for="position_id">Position</label>
 					<select class="form-control" name="position_id" :value="nominee.position_id" required>
 						<option value="0" disabled>--- Select Position ---</option>
