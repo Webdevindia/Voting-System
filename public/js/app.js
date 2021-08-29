@@ -7397,6 +7397,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -7596,6 +7598,8 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(voter.course))]),
                         _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(voter.otp))]),
+                        _vm._v(" "),
                         _c("td", [
                           _c(
                             "button",
@@ -7733,6 +7737,8 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Unit")]),
         _vm._v(" "),
+        _c("th", [_vm._v("OTP")]),
+        _vm._v(" "),
         _c("th", [_vm._v("Action")])
       ])
     ])
@@ -7829,6 +7835,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -7886,6 +7897,8 @@ var render = function() {
           _vm._m(1),
           _vm._v(" "),
           _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
           _vm._v(" "),
           _c(
             "div",
@@ -7954,6 +7967,19 @@ var staticRenderFns = [
         attrs: { type: "text", name: "course", required: "" }
       })
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "course" } }, [_vm._v("OTP")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", name: "otp", required: "" }
+      })
+    ])
   }
 ]
 render._withStripped = true
@@ -8018,6 +8044,11 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8135,6 +8166,16 @@ var render = function() {
               staticClass: "form-control",
               attrs: { type: "text", name: "course", required: "" },
               domProps: { value: _vm.data.voter.course }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "course" } }, [_vm._v("OTP")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", name: "otp", required: "" },
+              domProps: { value: _vm.data.voter.otp }
             })
           ]),
           _vm._v(" "),

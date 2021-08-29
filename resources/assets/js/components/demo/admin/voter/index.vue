@@ -23,6 +23,7 @@
 						<th>Name</th>
 						<th>Civ HR Control nr</th>
 						<th>Unit</th>
+						<th>OTP</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -31,6 +32,7 @@
 						<td>{{ voter.name }}</td>
 						<td>{{ voter.student_id }}</td>
 						<td>{{ voter.course }}</td>
+						<td>{{ voter.otp }}</td>
 						<td>
 							<button class="btn btn-info" @click="edit(i)">
 								<i class="fa fa-edit"></i> Edit

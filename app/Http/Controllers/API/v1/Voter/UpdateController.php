@@ -35,7 +35,13 @@ class UpdateController extends Controller
                     $query->where('election_id', Util::getCurrentElection());
                 })
             ],
-    		'course' => 'required'
+    		'course' => 'required',
+            'otp' => [
+                'required',
+                Rule::unique('voter')->ignore($id)->where(function($query){
+                    $query->where('election_id', Util::getCurrentElection());
+                })
+            ]
     	]);
     }
 

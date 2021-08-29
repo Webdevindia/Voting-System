@@ -19,6 +19,11 @@
 			</div>
 
 			<div class="form-group">
+				<label for="course">OTP</label>
+				<input type="text" name="otp" class="form-control" required>
+			</div>
+
+			<div class="form-group">
 				<button type="submit" class="btn btn-success">Submit</button>
 				<router-link :to="{name: 'Manage Voter'}" class="btn btn-default">Back</router-link>
 			</div>
