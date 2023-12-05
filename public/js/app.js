@@ -2786,6 +2786,89 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	created: function created() {
@@ -2860,6 +2943,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				if (selected[i]['position_id'] == id) return this.getNominee(selected[i]['nominee_id']);
 			}return '';
 		},
+		getAmenable: function getAmenable(id) {
+			var amenables = this.data.positions;
+			var selected = this.selected;
+			for (var i in selected) {
+				if (selected[i]['position_id'] == id) return this.getNominee(selected[i]['nominee_id']);
+			}return '';
+		},
 
 		getNominee: function getNominee(id) {
 			var nominees = this.data.nominees;
@@ -2875,6 +2965,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			}return 'No Team';
 		}
 	}
+
 });
 
 /***/ }),
@@ -2887,7 +2978,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row col-md-10 col-md-offset-1" },
+    { staticClass: "row col-md-12 " },
     [
       _c("div", { staticClass: "col-md-4" }, [
         _c("h4", [_vm._v("Vote Information")]),
@@ -2899,8 +2990,15 @@ var render = function() {
           [
             _vm._l(_vm.data.positions, function(position) {
               return _c("li", { staticClass: "list-group-item" }, [
-                _c("b", [_vm._v(_vm._s(position.name) + " : ")]),
-                _vm._v(_vm._s(_vm.getName(position.id)) + "\n\t\t\t")
+                _c("b", [
+                  position.name == "Amenable"
+                    ? _c("label", [
+                        _vm._v("Extend the TENURE of PACPA OFFICERS")
+                      ])
+                    : _c("label", [_vm._v(_vm._s(position.name))]),
+                  _vm._v(" : ")
+                ]),
+                _vm._v(_vm._s(_vm.getName(position.id)) + "\r\n\r\n\t\t\t")
               ])
             }),
             _vm._v(" "),
@@ -2947,99 +3045,150 @@ var render = function() {
         "div",
         { staticClass: "col-md-8" },
         [
+          _vm._l(_vm.data.positions, function(position) {
+            return position.name == "Amenable"
+              ? _c("div", { staticClass: "panel panel-info" }, [
+                  _c("div", { staticClass: "panel-heading" }, [
+                    position.name == "Amenable"
+                      ? _c("label", [
+                          _vm._v("Extend the TENURE of PACPA OFFICERS")
+                        ])
+                      : _c("label", [_vm._v(_vm._s(position.name))])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "panel-body table-responsive" }, [
+                    _c("table", { staticClass: "table table-hover" }, [
+                      _vm._m(0, true),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.data.nominees, function(nominee) {
+                          return nominee.position_id == position.id
+                            ? _c(
+                                "tr",
+                                {
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.vote(position.id, nominee.id)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("td", { attrs: { width: "5%" } }, [
+                                    _c("input", {
+                                      staticStyle: {
+                                        width: "2em",
+                                        height: "2em",
+                                        "margin-top": "2em"
+                                      },
+                                      attrs: {
+                                        type: "radio",
+                                        name: position.id,
+                                        id: nominee.id
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", { attrs: { colspan: "2" } }, [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "margin-top": "2em" } },
+                                      [_vm._v(_vm._s(nominee.name))]
+                                    )
+                                  ])
+                                ]
+                              )
+                            : _vm._e()
+                        }),
+                        0
+                      )
+                    ])
+                  ])
+                ])
+              : _vm._e()
+          }),
+          _vm._v(" "),
           _c("h4", [_vm._v("Select Candidates")]),
           _c("hr"),
           _vm._v(" "),
           _vm._l(_vm.data.positions, function(position) {
-            return _c("div", { staticClass: "panel panel-info" }, [
-              _c("div", { staticClass: "panel-heading" }, [
-                _vm._v(_vm._s(position.name))
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "panel-body table-responsive" }, [
-                _c("table", { staticClass: "table table-hover" }, [
-                  _vm._m(0, true),
+            return position.name != "Amenable"
+              ? _c("div", { staticClass: "panel panel-info" }, [
+                  _c("div", { staticClass: "panel-heading" }, [
+                    _vm._v(_vm._s(position.name))
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.data.nominees, function(nominee) {
-                      return nominee.position_id == position.id
-                        ? _c(
-                            "tr",
-                            {
-                              on: {
-                                click: function($event) {
-                                  return _vm.vote(position.id, nominee.id)
-                                }
-                              }
-                            },
-                            [
-                              _c("td", [
-                                _c("input", {
-                                  staticStyle: {
-                                    width: "2em",
-                                    height: "2em",
-                                    "margin-top": "2em"
-                                  },
-                                  attrs: {
-                                    type: "radio",
-                                    name: position.id,
-                                    id: nominee.id
+                  _c("div", { staticClass: "panel-body table-responsive" }, [
+                    _c("table", { staticClass: "table table-hover" }, [
+                      _vm._m(1, true),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.data.nominees, function(nominee) {
+                          return nominee.position_id == position.id
+                            ? _c(
+                                "tr",
+                                {
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.vote(position.id, nominee.id)
+                                    }
                                   }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c("img", {
-                                  staticClass: "thumbnail",
-                                  staticStyle: {
-                                    height: "80px",
-                                    width: "80px"
-                                  },
-                                  attrs: {
-                                    src: _vm.data.storageURL + nominee.image
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c(
-                                  "p",
-                                  { staticStyle: { "margin-top": "2em" } },
-                                  [_vm._v(_vm._s(nominee.name))]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c(
-                                  "p",
-                                  { staticStyle: { "margin-top": "2em" } },
-                                  [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.getPartylist(nominee.partylist_id)
-                                      )
+                                },
+                                [
+                                  _c("td", [
+                                    _c("input", {
+                                      staticStyle: {
+                                        width: "2em",
+                                        height: "2em",
+                                        "margin-top": "2em"
+                                      },
+                                      attrs: {
+                                        type: "radio",
+                                        name: position.id,
+                                        id: nominee.id
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("img", {
+                                      staticClass: "thumbnail",
+                                      staticStyle: {
+                                        height: "80px",
+                                        width: "80px"
+                                      },
+                                      attrs: {
+                                        src: _vm.data.storageURL + nominee.image
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "margin-top": "2em" } },
+                                      [_vm._v(_vm._s(nominee.name))]
                                     )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c(
-                                  "p",
-                                  { staticStyle: { "margin-top": "2em" } },
-                                  [_vm._v(_vm._s(nominee.course))]
-                                )
-                              ])
-                            ]
-                          )
-                        : _vm._e()
-                    }),
-                    0
-                  )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "margin-top": "2em" } },
+                                      [_vm._v(_vm._s(nominee.course))]
+                                    )
+                                  ])
+                                ]
+                              )
+                            : _vm._e()
+                        }),
+                        0
+                      )
+                    ])
+                  ])
                 ])
-              ])
-            ])
+              : _vm._e()
           })
         ],
         2
@@ -3092,13 +3241,25 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
+        _c("th", { attrs: { colspan: "3" } }, [
+          _vm._v(
+            " Do you agree to EXTEND THE TENURE OF INCUMBENT PACPA OFFICERS for another one (1) year? "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
         _c("th"),
         _vm._v(" "),
         _c("th", { attrs: { width: "7%" } }),
         _vm._v(" "),
         _c("th", [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Team Name")]),
         _vm._v(" "),
         _c("th", [_vm._v("Unit")])
       ])
@@ -9078,7 +9239,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n\t\t\t\t\t\tCancel\n\t\t\t\t\t")]
+                  [_vm._v("\r\n\t\t\t\t\t\tCancel\r\n\t\t\t\t\t")]
                 )
               ],
               1

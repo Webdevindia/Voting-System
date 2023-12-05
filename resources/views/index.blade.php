@@ -30,7 +30,7 @@
 		"API":"{{ url('api/v1') }}/", //URL OF YOUR API LOCATED
 		"baseURL":"{{ url('') }}/", //URL OF YOUR WEBSITE
 		"storageURL":"{{ config('app.cloudinary_enabled') ? '' : url('storage') }}/", //URL WHERE YOUR IMAGES and OTHER FILEs stored
-		"debug": {{ env('APP_DEBUG') }}
+		{{--"debug": {{ env('APP_DEBUG') }}--}}
 	}
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
